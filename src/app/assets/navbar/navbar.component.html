@@ -1,1 +1,15 @@
-<p>navbar works!</p>
+<nav>
+    <div class="nav-wrapper grey darken-4">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li *ngIf="activeSession"><a routerLink="/admin/get">Usuarios</a></li>
+        <li *ngIf="activeSession"><a routerLink="/airport/get">Aeropuertos</a></li>
+        <li *ngIf="activeSession"><a routerLink="/route/get">Rutas</a></li>
+        <li *ngIf="activeSession"><a routerLink="/flight/get">Vuelos</a></li>
+         <!-- Sesion -->
+      <li *ngIf="!activeSession"><a routerLink="/security/login">Login</a></li>
+      <li *ngIf="!activeSession"><a routerLink="/admin/create">Registrarse</a></li>
+      <li *ngIf="activeSession"><a routerLink="/security/logout">Cerrar Sesion</a></li>
+      </ul>
+    </div>
+  </nav>
